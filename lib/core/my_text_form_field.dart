@@ -6,7 +6,6 @@ import 'package:flutter/material.dart';
 class CustomTextField extends StatelessWidget {
   final double? sizePadding;
   final Color? colorContainer;
-  final Color? colorText;
   final String? text;
   final bool borderDelete;
   final TextEditingController controller;
@@ -15,7 +14,7 @@ class CustomTextField extends StatelessWidget {
   final Widget? suffix;
   final Function()? suffixPressed;
   final TextInputType? keyboardType;
-  final String? Function(String?)? valeditor;
+  final String? Function(String?)? validator;
   final TextDirection? textDirection;
   final Function()? onTap;
   final bool? obscureText;
@@ -25,11 +24,11 @@ class CustomTextField extends StatelessWidget {
   const CustomTextField({
     super.key,
     this.borderDelete = false,
-    this.fillColor = Colors.white,
+    this.fillColor = MyColor.formColor,
     this.obscureText = true,
     required this.onTap,
     this.textDirection,
-    required this.valeditor,
+    required this.validator,
     this.sizePadding = 15,
     this.keyboardType = TextInputType.text,
     required this.text,
@@ -38,7 +37,6 @@ class CustomTextField extends StatelessWidget {
     this.suffix,
     this.prefix,
     this.suffixPressed,
-    this.colorText,
     this.onchanged,
     this.colorContainer,
   });
@@ -46,13 +44,18 @@ class CustomTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextFormField(
+      style: const TextStyle(
+        color: Colors.black,
+        fontSize: 16,
+        fontWeight: FontWeight.w400,
+      ),
       obscureText: obscureText!,
       onTap: onTap,
       onChanged: onchanged,
       textDirection: textDirection,
       controller: controller,
       textAlign: textAlign!,
-      validator: valeditor,
+      validator: validator,
       keyboardType: keyboardType,
       decoration: InputDecoration(
         contentPadding:
@@ -60,8 +63,8 @@ class CustomTextField extends StatelessWidget {
         suffixIconColor: Colors.grey,
         hintText: text,
         hintStyle: const TextStyle(
-          color: Colors.grey,
-          fontSize: 14,
+          color: MyColor.hintColor,
+          fontSize: 20,
           fontWeight: FontWeight.w400,
         ),
         fillColor: fillColor,
@@ -95,7 +98,7 @@ class CustomTextField extends StatelessWidget {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
       borderSide: const BorderSide(
-        color: Color.fromARGB(179, 158, 158, 158),
+        color: MyColor.formColor,
         width: 0.7,
       ),
     );
@@ -106,7 +109,7 @@ class CustomTextField extends StatelessWidget {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
       borderSide: const BorderSide(
-        color: Color.fromARGB(179, 158, 158, 158),
+        color: MyColor.formColor,
         width: 0.7,
       ),
     );
@@ -117,7 +120,7 @@ class CustomTextField extends StatelessWidget {
     return OutlineInputBorder(
       borderRadius: BorderRadius.circular(12),
       borderSide: const BorderSide(
-        color: MyColor.primaryColorBlue,
+        color: MyColor.formColor,
         width: 0.7,
       ),
     );
