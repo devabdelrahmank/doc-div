@@ -39,7 +39,7 @@ class AuthScreen extends StatelessWidget {
                 ],
               ),
             ),
-            verticalSpacing(10),
+            vSpace(10),
             Text(
               MyText.dermatologyCenter,
               style: MyStyles.title12Blackw300.copyWith(
@@ -47,12 +47,12 @@ class AuthScreen extends StatelessWidget {
                 color: MyColor.primaryColor,
               ),
             ),
-            verticalSpacing(50),
+            vSpace(50),
             const Text(
               MyText.lorem,
               textAlign: TextAlign.center,
             ),
-            verticalSpacing(30),
+            vSpace(30),
             MyTextBtn(
               onTap: () {
                 Navigator.pushNamed(context, 'LoginScreen');
@@ -61,7 +61,7 @@ class AuthScreen extends StatelessWidget {
               color: MyColor.primaryColor,
               textColor: Colors.white,
             ),
-            verticalSpacing(10),
+            vSpace(10),
             MyTextBtn(
               onTap: () {
                 Navigator.pushNamed(context, 'SignupScreen');

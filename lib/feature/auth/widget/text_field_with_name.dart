@@ -32,7 +32,7 @@ class TextFieldWithName extends StatelessWidget {
           text,
           style: MyStyles.title20Black500,
         ),
-        verticalSpacing(10),
+        vSpace(10),
         CustomTextField(
           text: hintText,
           textAlign: TextAlign.start,
@@ -43,7 +43,7 @@ class TextFieldWithName extends StatelessWidget {
           obscureText: obscureText,
           suffix: suffixWidget,
         ),
-        verticalSpacing(20),
+        vSpace(20),
       ],
     );
   }

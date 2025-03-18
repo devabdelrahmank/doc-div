@@ -30,7 +30,7 @@ class SignupScreen extends StatelessWidget {
           scrollDirection: Axis.vertical,
           child: Column(
             children: [
-              verticalSpacing(36),
+              vSpace(36),
               TextFieldWithName(
                 text: MyText.fullName,
                 hintText: 'John Doe',
@@ -81,7 +81,7 @@ class SignupScreen extends StatelessWidget {
                   fontWeight: FontWeight.w500,
                 ),
               ),
-              verticalSpacing(10),
+              vSpace(10),
               MyTextBtn(
                 onTap: () {},
                 text: MyText.signUP,

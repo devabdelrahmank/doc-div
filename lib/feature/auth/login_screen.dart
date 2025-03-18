@@ -2,6 +2,7 @@ import 'package:doc_div/core/my_color.dart';
 import 'package:doc_div/core/my_styles.dart';
 import 'package:doc_div/core/my_text.dart';
 import 'package:doc_div/core/spacing.dart';
+import 'package:doc_div/feature/auth/home/home.dart';
 import 'package:doc_div/feature/auth/widget/my_text_btn.dart';
 import 'package:doc_div/feature/auth/widget/text_field_with_name.dart';
 import 'package:flutter/material.dart';
@@ -36,13 +37,13 @@ class LoginScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                verticalSpacing(50),
+                vSpace(50),
                 Text(
                   MyText.welcome,
                   style: MyStyles.title24Whitew300.copyWith(
                       color: MyColor.primaryColor, fontWeight: FontWeight.w600),
                 ),
-                verticalSpacing(50),
+                vSpace(50),
                 TextFieldWithName(
                   text: MyText.emailOrMobile,
                   hintText: MyText.example,
@@ -76,24 +77,31 @@ class LoginScreen extends StatelessWidget {
                     )
                   ],
                 ),
-                verticalSpacing(50),
+                vSpace(50),
                 Center(
                   child: Column(
                     children: [
                       MyTextBtn(
-                        onTap: () {},
+                        onTap: () {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => const HomeScreen(),
+                            ),
+                          );
+                        },
                         text: MyText.login,
                         color: MyColor.primaryColor,
                         textColor: Colors.white,
                       ),
-                      verticalSpacing(20),
+                      vSpace(20),
                       const Text(
                         MyText.or,
                         style: MyStyles.title12Blackw300,
                       ),
-                      verticalSpacing(20),
+                      vSpace(20),
                       /* حط الايكون هنا */
-                      verticalSpacing(35),
+                      vSpace(35),
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
