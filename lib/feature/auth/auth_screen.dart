@@ -3,6 +3,8 @@ import 'package:doc_div/core/my_images.dart';
 import 'package:doc_div/core/my_styles.dart';
 import 'package:doc_div/core/my_text.dart';
 import 'package:doc_div/core/spacing.dart';
+import 'package:doc_div/feature/auth/login_screen.dart';
+import 'package:doc_div/feature/auth/signup_screen.dart';
 import 'package:doc_div/feature/auth/widget/my_text_btn.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -20,19 +22,13 @@ class AuthScreen extends StatelessWidget {
           children: [
             SvgPicture.asset(MyImages.appLogo),
             const SizedBox(
-              height: 100,
+              height: 120,
               width: 100,
               child: Column(
                 children: [
                   Expanded(
                     child: Text(
                       MyText.skin,
-                      style: MyStyles.title48Bluew100,
-                    ),
-                  ),
-                  Expanded(
-                    child: Text(
-                      MyText.firts,
                       style: MyStyles.title48Bluew100,
                     ),
                   ),
@@ -55,7 +51,11 @@ class AuthScreen extends StatelessWidget {
             vSpace(30),
             MyTextBtn(
               onTap: () {
-                Navigator.pushNamed(context, 'LoginScreen');
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return LoginScreen();
+                  },
+                ));
               },
               text: MyText.login,
               color: MyColor.primaryColor,
@@ -64,7 +64,11 @@ class AuthScreen extends StatelessWidget {
             vSpace(10),
             MyTextBtn(
               onTap: () {
-                Navigator.pushNamed(context, 'SignupScreen');
+                Navigator.push(context, MaterialPageRoute(
+                  builder: (context) {
+                    return const SignupScreen();
+                  },
+                ));
               },
               text: MyText.signUP,
               color: MyColor.secondaryColor,

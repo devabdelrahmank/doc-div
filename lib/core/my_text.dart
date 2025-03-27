@@ -47,4 +47,29 @@ class MyText {
   static const String cosmeticBioengineering = 'Cosmetic Bioengineering';
   static const String michaelDavidson = 'Michael Davidson';
   static const String nanoDermatology = 'Nano-Dermatology';
+  static const String info = 'Info';
+  static const String solarDermatology = 'Solar Dermatology';
+  static const String sortBy = 'Sort by';
+  static const String experience = '15 years\nexperience';
+  static const String focus = 'Focus: ';
+  static const String theImpact =
+      'The impact of hormonal imbalances on skin conditions, specializing in acne, hirsutism, and other skin disorders.';
+  static const String schedule = 'Schedule';
+  static const String monSat = 'Mon-Sat / 9:00AM - 5:00PM';
+  static const String doctorInfo = 'Doctor Info';
+  static const String profile = 'Profile';
+  static const String careerPath = 'career path';
+  static const String highlights = 'highlights';
+  static const String professionalDoctor = 'Professional Doctor';
+  static const String sort = 'a→z';
+  static const String infoLorem =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.z';
+  static const String rating = 'Rating';
+  static const String services = 'Services';
+  static const String makeAppointment = 'Make Appointment';
+  static const String lookingDoctors = 'looking doctors';
+  static const String female = 'Female';
+  static const String male = 'Male';
+  static const String servicesLorem =
+      'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent pellentesque congue lorem, vel tincidunt tortor placerat a. Proin ac diam quam. Aenean in sagittis magna, ut feugiat diam.';
 }

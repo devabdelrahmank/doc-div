@@ -1,5 +1,7 @@
 import 'package:doc_div/core/my_color.dart';
 import 'package:doc_div/core/spacing.dart';
+import 'package:doc_div/feature/doctors/doctors.dart';
+import 'package:doc_div/feature/doctors/favorite.dart';
 import 'package:flutter/material.dart';
 
 class HomeSearch extends StatelessWidget {
@@ -10,7 +12,13 @@ class HomeSearch extends StatelessWidget {
     return Row(
       children: [
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return const Doctors();
+              },
+            ));
+          },
           icon: const Icon(
             size: 30,
             Icons.medical_information_outlined,
@@ -18,7 +26,13 @@ class HomeSearch extends StatelessWidget {
           ),
         ),
         IconButton(
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(context, MaterialPageRoute(
+              builder: (context) {
+                return const Favorite();
+              },
+            ));
+          },
           icon: const Icon(
             size: 30,
             Icons.favorite_outline,

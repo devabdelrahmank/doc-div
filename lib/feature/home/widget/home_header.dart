@@ -17,7 +17,7 @@ class HomeHeader extends StatelessWidget {
           children: [
             const CircleAvatar(
               radius: 25,
-              backgroundImage: AssetImage(MyImages.splash),
+              backgroundImage: AssetImage(MyImages.johnDou),
             ),
             hSpace(10),
             Column(
@@ -36,22 +36,20 @@ class HomeHeader extends StatelessWidget {
           children: [
             IconButton(
               icon: Container(
-                width: 40,
-                height: 40,
-                decoration: const BoxDecoration(
-                    color: MyColor.secondaryColor, shape: BoxShape.circle),
-                child: const Icon(Icons.notifications_outlined),
-              ),
+                  width: 40,
+                  height: 40,
+                  decoration: const BoxDecoration(
+                      color: MyColor.secondaryColor, shape: BoxShape.circle),
+                  child: const Icon(Icons.notifications_outlined)),
               onPressed: () {},
             ),
             IconButton(
               icon: Container(
-                width: 40,
-                height: 40,
-                decoration: const BoxDecoration(
-                    color: MyColor.secondaryColor, shape: BoxShape.circle),
-                child: const Icon(Icons.settings_outlined),
-              ),
+                  width: 40,
+                  height: 40,
+                  decoration: const BoxDecoration(
+                      color: MyColor.secondaryColor, shape: BoxShape.circle),
+                  child: const Icon(Icons.settings_outlined)),
               onPressed: () {},
             ),
           ],

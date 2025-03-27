@@ -3,11 +3,10 @@ import 'package:doc_div/core/my_styles.dart';
 import 'package:doc_div/core/my_text.dart';
 import 'package:doc_div/core/spacing.dart';
 import 'package:doc_div/feature/auth/widget/my_text_btn.dart';
-import 'package:doc_div/feature/auth/widget/text_field_with_name.dart';
+import 'package:doc_div/feature/auth/widget/my_text_field_with_name.dart';
 import 'package:flutter/material.dart';
 
 class SignupScreen extends StatelessWidget {
-  static const routeName = 'signupScreen';
   const SignupScreen({super.key});
 
   @override
